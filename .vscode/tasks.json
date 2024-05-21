@@ -6,8 +6,15 @@
         {
             "label": "Build Application Task",
             "type": "shell",
-            "command": ".\\Build.bat",
+            "command": ".\\Build.bat ${input:fileName}",
             "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+          "id": "fileName",
+          "type": "promptString",
+          "description": "File name"
         }
     ]
 }
