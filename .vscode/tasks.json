@@ -6,11 +6,16 @@
         {
             "label": "Build Application Task",
             "type": "shell",
-            "command": ".\\Build.bat ${input:fileName}",
+            "command": ".\\Build.bat ${input:folderName} ${input:fileName}",
             "problemMatcher": []
         }
     ],
     "inputs": [
+        {
+            "id": "folderName",
+            "type": "promptString",
+            "description": "Folder name"
+        },
         {
           "id": "fileName",
           "type": "promptString",

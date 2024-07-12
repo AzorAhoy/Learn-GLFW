@@ -1,7 +1,8 @@
 set arg1=%1
+set arg2=%2
 @echo Building GLFW Application...
-g++ -c -I. include/glad/glad.c -Iglfw3 -Iopengl32 -Igdi32 src/%arg1%.cpp
+g++ -c -I. include/glad/glad.c -Iglfw3 -Iopengl32 -Igdi32 src/%arg1%/%arg2%.cpp
 @echo Compilation complete, proceeding to linking...
-g++ -o app.exe %arg1%.o -L. include/glad/glad.c -lglfw3 -lopengl32 -lgdi32 
+g++ -o app.exe %arg2%.o -L. include/glad/glad.c -lglfw3 -lopengl32 -lgdi32 
 @echo Linking complete, running application...
 .\app.exe
